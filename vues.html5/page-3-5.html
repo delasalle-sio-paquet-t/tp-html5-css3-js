@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TP 3.5 / Effet d'accordéon</title>
+<style>
+body
+{
+	font : 0.8em Verdana, Arial, Helvetica, sans-serif;
+}
+
+#accordeon
+{
+	width : 500px;
+	margin : 0 auto;
+	padding : 5px;
+	border : 1px solid #333;
+	background-color : lightsteelblue;
+}
+
+h3
+{
+	margin : 0;
+	padding : 5px;
+	background-color : #eee;
+}
+
+h3 a 
+{
+	text-decoration : none;
+	color : grey;
+}
+
+#accordeon .famille
+{
+	background-color : white;
+	border-bottom : 1px solid #333;
+}
+
+#accordeon h3 + div 
+{
+	height : 0;
+	overflow : hidden;
+	
+	-webkit-transition : height 0.3s ease-in;
+	-moz-transition : height 0.3s ease-in;
+	-o-transition : height 0.3s ease-in;
+	transition : height 0.3s ease-in;
+}
+
+#accordeon :target h3 + div
+{
+	height : 140px;
+	overflow : auto;
+}
+
+</style>
+</head>
+<body>
+	<div id="accordeon">
+		<h2>Nouveaux arrivants</h2>
+			<div id="famille1" class="famille">
+				<h3><a href="#famille1">Famille VERSAIRE</a></h3>
+					<div>
+						<ul>
+							<li>Elsa VERSAIRE</li>
+							<li>Rose VERSAIRE</li>
+							<li>Laure VERSAIRE</li>
+							<li>Annie VERSAIRE</li>					
+						</ul>
+					</div>
+			</div>
+			<div id="famille2" class="famille">
+				<h3><a href="#famille2">Famille FEIMAL</a></h3>
+					<div>
+						<ul>
+							<li>Akim FEIMAL</li>
+							<li>Sam FEIMAL</li>
+							<li>Emma FEIMAL</li>
+							<li>Hirma FEIMAL</li>
+							<li>Oussama FEIMAL</li>					
+						</ul>
+					</div>
+			</div>
+			<div id="famille3" class="famille">
+				<h3><a href="#famille3">Famille TITEGOUTTE</a></h3>
+					<div>
+						<ul>
+							<li>Anne TITEGOUTTE</li>
+							<li>Corinne TITEGOUTTE</li>
+							<li>Justine TITEGOUTTE</li>
+							<li>Emma TITEGOUTTE</li>				
+						</ul>
+					</div>
+			</div>
+			<div id="famille4" class="famille">
+				<h3><a href="#famille4">Famille FROID</a></h3>
+					<div>
+						<ul>
+							<li>Eva FROID</li>
+							<li>Aude FROID</li>
+							<li>Anne FROID</li>
+							<li>Marc FROID</li>
+							<li>Sanson FROID</li>
+							<li>Jules FROID</li>
+							<li>Ella FROID</li>					
+						</ul>
+					</div>
+			</div>
+	</div>
+</body>
+</html>
